@@ -128,7 +128,7 @@ function arvuta() {
     
     ////// Fill "Hind" fields
     document.getElementById('v1').innerHTML = ToFixed(v1/100, 2);
-    document.getElementById('v2').innerHTML = v2.value ; // ToFixed(v2/100, 2);
+    document.getElementById('v2').innerHTML = value.v2 ; // ToFixed(v2/100, 2);
     document.getElementById('vk2').innerHTML = ToFixed(vk2/100, 2);
     if(aasta < 5) {
         document.getElementById('v3').innerHTML = (v3/100).toFixed(2);
