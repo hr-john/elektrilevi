@@ -107,7 +107,11 @@ function arvuta() {
     
     ////// Crunch the numbers
     let v1 = Math.round(kokkuKW * Number(hind[aasta][2])*100)/100;
-    let v2 = Math.round( ( (Number(p) + Number(pt)) * Number(hind[aasta][3]) + (Number(o) + Number(ot)) * Number(hind[aasta][4]) )*100)/100;
+    if(aasta > 10) {
+      let v2 = Math.round( ( (Number(p) + Number(pt)) * Number(hind[aasta][3]) + (Number(o) + Number(ot)) * Number(hind[aasta][4]) )*100)/100 + kuutasu[aasta][1][kaitse];
+    } else {
+      let v2 = Math.round( ( (Number(p) + Number(pt)) * Number(hind[aasta][3]) + (Number(o) + Number(ot)) * Number(hind[aasta][4]) )*100)/100;
+     }
     let vk2 = Math.round( ( (Number(p)+ Number(pt)) * Number(hind[aasta][5]) + (Number(o) + Number(ot)) * Number(hind[aasta][6]) )*100)/100 + kuutasu[aasta][1][kaitse];
     // The Võrk 3 was replaced fully with Võrk 4 from 1. march 2022
     if(aasta < 5) {
