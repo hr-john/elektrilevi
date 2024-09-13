@@ -112,7 +112,7 @@ function arvuta() {
     } else {
       let v2 = Math.round( ( (Number(p) + Number(pt)) * Number(hind[aasta][3]) + (Number(o) + Number(ot)) * Number(hind[aasta][4]) )*100)/100;
      }
-    let vk2 = Math.round( ( (Number(p)+ Number(pt)) * Number(hind[aasta][5]) + (Number(o) + Number(ot)) * Number(hind[aasta][6]) )*100)/100 + kuutasu[aasta][1][kaitse];
+     let vk2 = Math.round( ( (Number(p) + Number(pt)) * Number(hind[aasta][5]) + (Number(o) + Number(ot)) * Number(hind[aasta][6]) )*100)/100 + kuutasu[aasta][1][kaitse];
     // The Võrk 3 was replaced fully with Võrk 4 from 1. march 2022
     if(aasta < 5) {
         var v3 = Math.round( (kokkuKW * Number(hind[aasta][7]) )*100)/100 + kuutasu[aasta][2][kaitse];
@@ -128,7 +128,7 @@ function arvuta() {
     
     ////// Fill "Hind" fields
     document.getElementById('v1').innerHTML = ToFixed(v1/100, 2);
-    document.getElementById('v2').innerHTML = ToFixed(v2/100, 2);
+    document.getElementById('v2').innerHTML = v2 ; // ToFixed(v2/100, 2);
     document.getElementById('vk2').innerHTML = ToFixed(vk2/100, 2);
     if(aasta < 5) {
         document.getElementById('v3').innerHTML = (v3/100).toFixed(2);
