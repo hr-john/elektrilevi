@@ -123,7 +123,7 @@ function arvuta() {
     const taastuvtasu_aktsiis = taastuvenergiatasu + aktsiis;
     
     ////// Fill "Hind" fields
-    document.getElementById('v1').innerHTML = ToFixed(v1/10, 2);
+    document.getElementById('v1').innerHTML = ToFixed(v1/100, 2);
     document.getElementById('v2').innerHTML = ToFixed(v2/100, 2);
     document.getElementById('vk2').innerHTML = ToFixed(vk2/100, 2);
     if(aasta < 5) {
